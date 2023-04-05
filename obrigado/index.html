@@ -100,7 +100,7 @@
             <span
               class="text-[12px] font-bold py-1 px-3 bg-primary absolute top-3 right-3 flex items-center justify-center rounded-[5px] tracking-wider"
             >
-              PASSO 01
+              PASSO 02
             </span>
 
             <h1
@@ -123,5 +123,25 @@
     </section>
   </body>
 
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    const timeText = document.querySelector('#timer')
+
+    let time = 30
+
+    const timer = () => {
+      setTimeout(() => {
+        time--
+
+        if (time > 0) {
+          timeText.innerHTML = time
+
+          timer()
+        } else {
+          window.location.href = 'http://google.com'
+        }
+      }, 1000)
+    }
+
+    timer()
+  </script>
 </html>

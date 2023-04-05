@@ -106,14 +106,6 @@ button {
   height: 200vh;
   top: -100vh;
 }
-
-.title {
-  background: -webkit-linear-gradient(left, #92c4dd 0%, #2947f8 25%);
-  background: linear-gradient(left, #92c4dd 0%, #2947f8 25%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bolder;
-}
 /* END:: Pagina INDEX */
 
 /* START:: Pagina OBRIGADO  */

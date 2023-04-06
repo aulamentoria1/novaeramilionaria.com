@@ -148,7 +148,7 @@ button:hover {
 }
 
 .obrigado::after {
-  background-image: url('../images/aa.png');
+  background-image: url('../images/obrigado.png');
   content: '';
   width: 100%;
   height: 100%;

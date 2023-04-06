@@ -1244,7 +1244,7 @@
                 // use this trick to get the submit button & disable it using plain javascript
                 document.querySelector('#_form_15_submit').disabled = true
                 var serialized = form_serialize(
-                  document.getElementById('_form_15')
+                  document.getElementById('form_15')
                 ).replace(/%0A/g, '\\n')
                 var err = form_to_submit.querySelector('._form_error')
                 err ? err.parentNode.removeChild(err) : false

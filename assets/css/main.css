@@ -123,13 +123,6 @@ button:hover {
   z-index: 0;
 }
 
-@media (max-width: 1024px) {
-  .hero::after {
-    background-size: cover;
-    background-position: right;
-  }
-}
-
 .hero::before {
   content: '';
   background: radial-gradient(rgba(75, 131, 232, 0.45), transparent 100%);
@@ -209,15 +202,25 @@ button:hover {
   align-items: center;
 }
 
+/* END:: Pagina OBRIGADO  */
+
+/* Breakpoint */
 @media (max-width: 1024px) {
+  .hero::after {
+    background-size: cover;
+    background-position: right;
+  }
+
+  .hero::before {
+    background: radial-gradient(rgba(75, 131, 232, 0.35), transparent 100%);
+  }
+
   .obrigado::after {
     background-size: cover;
     background-position: center;
-    opacity: 0.4;
   }
 
   .box-step {
     padding: 30px 20px;
   }
 }
-/* END:: Pagina OBRIGADO  */

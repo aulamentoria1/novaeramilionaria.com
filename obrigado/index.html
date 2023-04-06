@@ -15,12 +15,21 @@
   </head>
 
   <body>
-    <section class="obrigado pt-[50px] pb-[20px]">
+    <section class="obrigado pt-[30px] lg:pt-[50px] pb-[20px]">
       <div class="container flex flex-col items-center">
-        <h2 class="color-primary text-lg font-bold">PARABÉNS</h2>
-        <h3 class="text-2xl text-center mt-2 font-bold">
+        <h2 class="color-primary text-xl font-bold">PARABÉNS</h2>
+
+        <h3
+          class="text-lg lg:text-2xl text-center mt-2 font-bold hidden lg:block"
+        >
           AGORA FALTAM APENAS <br />
           2 PASSOS SIMPLES PARA CONCLUIR A SUA INSCRIÇÃO.
+        </h3>
+
+        <h3
+          class="text-lg lg:text-2xl text-center mt-2 font-bold block lg:hidden"
+        >
+          AGORA FALTAM APENAS 2 PASSOS SIMPLES PARA CONCLUIR A SUA INSCRIÇÃO.
         </h3>
 
         <p class="flex items-center gap-2 tracking-wider my-5">
@@ -59,7 +68,7 @@
             </span>
 
             <h1
-              class="text-center mt-10 font-bold text-lg tracking-wider leading-5"
+              class="text-center mt-10 font-bold lg:text-lg tracking-wider leading-5"
             >
               ENTRE AGORA PARA O NOSSO GRUPO VIP NO WHATSAPP
             </h1>
@@ -80,10 +89,12 @@
               ENTRAR NO GRUPO
             </a>
 
-            <p>Você será redirecionado para o grupo em…</p>
+            <p class="text-[14px] lg:text-[16px] text-center">
+              Você será redirecionado para o grupo em…
+            </p>
 
             <div class="box-timer mt-5">
-              <h5 id="timer" class="text-2xl leading-5 font-bold">30</h5>
+              <h5 id="timer" class="text-2xl leading-7 font-bold">30</h5>
               <p class="text-[13px] leading-5">SEGUNDOS</p>
             </div>
           </div>
@@ -104,7 +115,7 @@
             </span>
 
             <h1
-              class="text-center mt-10 font-bold text-lg tracking-wider leading-5"
+              class="text-center mt-10 font-bold lg:text-lg tracking-wider leading-5"
             >
               ABRA SEU E-MAIL E CONFIRME A SUA PARTICIPAÇÃO
             </h1>

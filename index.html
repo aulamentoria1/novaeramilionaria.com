@@ -25,47 +25,67 @@
   </head>
 
   <body>
-    <section class="hero py-[60px]">
+    <section class="hero pt-[30px] lg:py-[60px] pb-[20px]">
       <div class="container">
         <img
           src="assets/images/logo.svg"
           width="150px"
           alt="Logo da nova era dos PLRs"
+          class="mx-auto lg:m-0"
         />
 
-        <p class="text-[16px] mb-10 mt-2">
+        <p class="text-[16px] mb-7 lg:mb-10 mt-2 text-center lg:text-left">
           Dias 8, 9 e 10 de Maio | Evento 100% online e 100% gratuito.
         </p>
 
-        <h1 class="text-[22px] lg:text-[30px] max-w-2xl leading-10">
+        <h1
+          class="text-lg lg:text-[30px] max-w-[670px] leading-7 lg:leading-10 text-center lg:text-left"
+        >
           Maio de 2023 Começa a
-          <strong class="color-primary">NOVA ERA dos PLRs</strong> <br />
+          <strong class="text-primary">NOVA ERA dos PLRs</strong> <br />
           Saia na frente e faça parte da nova geração de pessoas que serão as
           pioneiras da NOVA ERA dos PLRs.
         </h1>
 
         <!-- START:: Formulário -->
-        <form action="#" id="form" class="w-full mt-[40px]">
-          <h2 class="tracking-wide mb-3">
+        <form action="#" id="form" class="w-full mt-7 lg:mt-10">
+          <h2 class="tracking-wide mb-3 text-center lg:text-left">
             Preencha seus dados para garantir sua vaga
           </h2>
 
           <div class="w-full grid gap-5 lg:grid-cols-3 mb-[30px]">
-            <input placeholder="Seu Nome" />
-            <input placeholder="Seu Melhor Email" />
-            <input placeholder="Seu Telefone" />
+            <div id="input-name" class="group-input">
+              <input id="name" placeholder="Seu Nome" onblur="checkName()" />
+            </div>
+
+            <div id="input-mail" class="group-input">
+              <input
+                id="mail"
+                placeholder="Seu Melhor Email"
+                onblur="checkMail()"
+              />
+            </div>
+
+            <div id="input-phone" class="group-input">
+              <input
+                id="phone"
+                placeholder="Seu Telefone"
+                onkeydown="keydownPhone(event)"
+                onblur="checkPhone()"
+              />
+            </div>
           </div>
 
           <button
             type="submit"
-            class="w-full lg:w-fit text-[17px] lg:text-[20px]"
+            class="w-full lg:w-fit text-[15px] lg:text-[20px]"
           >
             QUERO ME INSCREVER NO EVENTO!
           </button>
         </form>
         <!-- END:: Formulário -->
 
-        <p class="mt-10 text-[15px]">
+        <p class="mt-10 text-[15px] text-white/80 text-center lg:text-left">
           Essa pode ser a maior oportunidade da história do marketing digital.
           Durante o evento, você terá acesso exclusivo a informações sigilosas e
           estratégias para criar um PLR da NOVA ERA. Venha ser pioneiro e faça
@@ -76,5 +96,80 @@
     </section>
   </body>
 
-  <script type="text/javascript"></script>
+  <script type="text/javascript">
+    const name = document.querySelector('#name')
+    const phone = document.querySelector('#phone')
+    const mail = document.querySelector('#mail')
+
+    const maskPhone = () => {
+      setTimeout(() => {
+        let value = phone.value.replace(/\D/g, '')
+        let result
+
+        if (value.length > 10) {
+          value = value.match(/(\d{0,2})(\d{0,1})(\d{0,4})(\d{0,4})/)
+
+          result = `(${value[1]}) ${value[2]}.${value[3]}-${value[4]}`
+        } else {
+          value = value.match(/(\d{0,2})(\d{0,4})(\d{0,4})/)
+
+          if (!value[2]) result = value[1]
+          if (value[2]) result = `(${value[1]}) ${value[2]}`
+          if (value[3]) result = `${result}-${value[3]}`
+        }
+
+        phone.value = result
+      })
+    }
+
+    const keydownPhone = event => {
+      const pattern = '[0-9]+'
+      let value = phone.value.replace(/\D/g, '')
+
+      if (value.length > 10 && event.key !== 'Backspace') {
+        event.preventDefault()
+      } else if (event.key.match(pattern) || event.key === 'Backspace') {
+        maskPhone()
+      } else {
+        event.preventDefault()
+      }
+    }
+
+    // Check inputs
+    const checkName = () => {
+      if (name.value.length > 0) {
+        name.classList.remove('border-red-500')
+        document.querySelector('#input-name').classList.add('checked')
+      } else {
+        document.querySelector('#input-name').classList.remove('checked')
+        name.classList.add('border-red-500')
+      }
+    }
+
+    const checkMail = () => {
+      const pattern = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i
+
+      const check = pattern.test(mail.value)
+
+      if (check) {
+        mail.classList.remove('border-red-500')
+        document.querySelector('#input-mail').classList.add('checked')
+      } else {
+        document.querySelector('#input-mail').classList.remove('checked')
+        mail.classList.add('border-red-500')
+      }
+    }
+
+    const checkPhone = () => {
+      let value = phone.value.replace(/\D/g, '')
+
+      if (value.length > 9) {
+        phone.classList.remove('border-red-500')
+        document.querySelector('#input-phone').classList.add('checked')
+      } else {
+        document.querySelector('#input-phone').classList.remove('checked')
+        phone.classList.add('border-red-500')
+      }
+    }
+  </script>
 </html>

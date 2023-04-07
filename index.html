@@ -136,7 +136,7 @@
                     id="phone"
                     name="phone"
                     placeholder="Digite seu telefone"
-                    onkeydown="keydownPhone(event)"
+                    onkeypress="keypressPhone(event)"
                     onblur="checkPhone()"
                     required
                   />
@@ -157,13 +157,13 @@
               </div>
             </div>
             <div class="_form_element _x84806378 _full_width">
-              <input type="hidden" id="field[92]" name="field[92]" value="" />
+              <input type="" id="field[92]" name="field[92]" value="" />
             </div>
             <div class="_form_element _x13467763 _full_width">
-              <input type="hidden" id="field[93]" name="field[93]" value="" />
+              <input type="" id="field[93]" name="field[93]" value="" />
             </div>
             <div class="_form_element _x19343954 _full_width">
-              <input type="hidden" id="field[94]" name="field[94]" value="" />
+              <input type="" id="field[94]" name="field[94]" value="" />
             </div>
             <div class="_button-wrapper _full_width">
               <button id="_form_15_submit" class="_submit" type="submit">
@@ -184,6 +184,8 @@
         </p>
       </div>
     </section>
+
+    <script src="js/myscript.js"></script>
   </body>
 
   <script type="text/javascript">
@@ -204,9 +206,9 @@
     window.onload = function () {
       const utm = queryUTM()
 
-      if (utm['utm_campaign'])
+      if (utm['utm_content'])
         document.querySelector('input[name="field[92]"]').value =
-          utm['utm_campaign']
+          utm['utm_content']
 
       if (utm['utm_medium'])
         document.querySelector('input[name="field[93]"]').value =
@@ -806,7 +808,7 @@
       })
     }
 
-    const keydownPhone = event => {
+    const keypressPhone = event => {
       const pattern = '[0-9]+'
       let value = phone.value.replace(/\D/g, '')
 

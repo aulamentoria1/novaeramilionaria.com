@@ -142,12 +142,13 @@ button:hover {
 .box-evento {
   width: 100%;
   height: auto;
-  padding: 50px 20px;
+  padding: 40px 20px 20px 20px;
   border: 2px solid var(--primary);
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
+
 .box-evento::before {
   content: '';
   background: radial-gradient(rgba(75, 131, 232, 0.3), transparent 100%);
@@ -155,6 +156,54 @@ button:hover {
   width: 100%;
   height: 200%;
   top: -100%;
+  z-index: 2;
+}
+
+.box-evento::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.evento-01::after {
+  background-image: url('../images/evento01.png');
+}
+
+.evento-02:after {
+  background-image: url('../images/evento02.png');
+}
+
+.evento-03::after {
+  background-image: url('../images/evento03.png');
+}
+
+.nova-era {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.nova-era::after {
+  background-image: url('../images/nova-era.png');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 50%;
+  opacity: 1;
+  z-index: 0;
 }
 /*END:: Pagina V2 */
 
@@ -247,6 +296,10 @@ button:hover {
 
   .box-step {
     padding: 30px 20px;
+  }
+
+  .nova-era::after {
+    background-size: cover;
   }
 }
 

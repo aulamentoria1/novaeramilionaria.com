@@ -100,6 +100,10 @@ button:hover {
   z-index: 9;
 }
 
+.container-lg {
+  max-width: 1100px !important;
+}
+
 /* START:: Pagina INDEX */
 .hero {
   min-width: 100%;
@@ -132,6 +136,26 @@ button:hover {
   top: -100vh;
 }
 /* END:: Pagina INDEX */
+
+/*START:: Pagina V2 */
+.box-evento {
+  width: 100%;
+  height: auto;
+  padding: 50px 20px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.box-evento::before {
+  content: '';
+  background: radial-gradient(rgba(75, 131, 232, 0.3), transparent 100%);
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: -100%;
+}
+/*END:: Pagina V2 */
 
 /* START:: Pagina OBRIGADO  */
 .obrigado {

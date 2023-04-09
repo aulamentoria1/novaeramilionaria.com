@@ -152,8 +152,17 @@ button:hover {
   font-weight: 600 !important;
   color: #fff !important;
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
   transition: all 0.3s ease;
+}
+
+.button-primary-02 {
+  background: linear-gradient(
+    268.62deg,
+    #07ffff -25.4%,
+    #281ef3 80.5%
+  ) !important;
 }
 
 .button-primary:hover {

@@ -123,14 +123,14 @@ input:focus {
 }
 
 button {
+  width: fit-content;
   background: linear-gradient(
     268.62deg,
     #07ffff -25.4%,
     #281ef3 80.5%
   ) !important;
   box-shadow: 0px 0px 31.0864px #281ef3;
-
-  padding: 10px 25px !important;
+  padding: 14px 25px !important;
   border-radius: 1px;
   font-weight: 600 !important;
   color: #fff !important;
@@ -140,6 +140,23 @@ button {
 }
 
 button:hover {
+  opacity: 0.8;
+}
+
+.button-primary {
+  width: fit-content;
+  background: linear-gradient(269.61deg, #cc00ff -26.33%, #0500ff 109.1%);
+  box-shadow: 0px 0px 31.0864px #281ef3;
+  padding: 14px 25px !important;
+  border-radius: 1px;
+  font-weight: 600 !important;
+  color: #fff !important;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
   opacity: 0.8;
 }
 
@@ -237,6 +254,34 @@ button:hover {
   opacity: 1;
   z-index: 0;
 }
+
+.footer-nova-era {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid #151c3e;
+  border-bottom: 2px solid #151c3e;
+}
+
+.footer-nova-era::after {
+  background-image: url('../images/bg-footer.png');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.footer-nova-era h1 {
+  text-shadow: 0px 0px 15px var(--primary);
+}
 /*END:: Pagina V2 */
 
 /* Breakpoint */
@@ -298,22 +343,6 @@ button:hover {
   width: 100vw;
   height: 200vh;
   top: -100vh;
-}
-
-.button-primary {
-  background: linear-gradient(to right, #4b83e8, #08ffff) !important;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.button-primary:hover {
-  opacity: 0.8;
 }
 
 .box-step {

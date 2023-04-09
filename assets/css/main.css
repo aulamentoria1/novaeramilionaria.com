@@ -83,12 +83,13 @@ img {
 }
 
 input {
+  background-color: #161a29 !important;
   width: 100%;
   margin-bottom: 15px;
   border: 2px solid var(--primary);
   background-color: transparent;
-  height: 50px;
-  line-height: 1.4em;
+  height: 50px !important;
+  line-height: 50px !important;
   border-radius: 3px;
   font-size: 18px;
   font-weight: 600 !important;
@@ -196,7 +197,7 @@ button:hover {
 }
 
 .hero::after {
-  background-image: url('../images/bg-hero.png');
+  background-image: url('../images/bg-hero.webp');
   content: '';
   width: 100%;
   height: 100%;
@@ -209,6 +210,37 @@ button:hover {
   background-size: 70%;
   opacity: 1;
   z-index: 0;
+}
+
+.hero-video {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video::after {
+  background-image: url('../images/bg-video.webp');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 110%;
+  opacity: 1;
+  z-index: 0;
+}
+
+.video {
+  background-color: #161a29;
+  width: 100%;
+  border: 2px solid var(--primary);
+  height: 40vh;
+  border-radius: 8px;
 }
 /* END:: Pagina INDEX */
 
@@ -234,7 +266,7 @@ button:hover {
 }
 
 .nova-era::after {
-  background-image: url('../images/bg-nova-era.png');
+  background-image: url('../images/bg-nova-era.webp');
   content: '';
   width: 100%;
   height: 100%;
@@ -255,7 +287,7 @@ button:hover {
 }
 
 .sobre-mim::after {
-  background-image: url('../images/bg-sobre-mim-desktop.png');
+  background-image: url('../images/bg-sobre-mim-desktop.webp');
   content: '';
   width: 100%;
   height: 100%;
@@ -279,7 +311,7 @@ button:hover {
 }
 
 .footer-nova-era::after {
-  background-image: url('../images/bg-footer.png');
+  background-image: url('../images/bg-footer.webp');
   content: '';
   width: 100%;
   height: 100%;
@@ -320,7 +352,7 @@ button:hover {
   }
 
   .sobre-mim::after {
-    background-image: url('../images/bg-sobre-mim-mobile.png');
+    background-image: url('../images/bg-sobre-mim-mobile.webp');
     background-size: 110%;
   }
 }
@@ -347,7 +379,7 @@ button:hover {
   }
 
   .evento::after {
-    background-image: url('../images/bg-nova-era.png');
+    background-image: url('../images/bg-nova-era.webp');
     content: '';
     width: 100%;
     height: 100%;
@@ -374,7 +406,7 @@ button:hover {
 }
 
 .obrigado::after {
-  background-image: url('../images/obrigado.png');
+  background-image: url('../images/obrigado.webp');
   content: '';
   width: 100%;
   height: 100%;

@@ -320,16 +320,16 @@ button:hover {
 
 @media (max-width: 640px) {
   .hero .kayky {
-    width: 140%;
-    max-width: 140%;
+    width: 150%;
+    max-width: 150%;
     left: -25%;
-    top: -50px;
+    top: -40px;
     display: block !important;
     position: relative;
   }
 
   .hero .container {
-    margin-top: -110px !important;
+    margin-top: -120px !important;
   }
 }
 /* START:: Pagina OBRIGADO  */

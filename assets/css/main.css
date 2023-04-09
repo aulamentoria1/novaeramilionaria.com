@@ -240,11 +240,11 @@ button:hover {
 /* Breakpoint */
 @media (max-width: 1024px) {
   .hero {
-    padding-top: 300px !important;
+    padding-top: 260px !important;
   }
 
   .hero::after {
-    background-size: 100%;
+    background-size: 110%;
     background-position: top;
   }
 

@@ -350,6 +350,10 @@ button:hover {
 
 /* Breakpoint */
 @media (max-width: 1024px) {
+  .bg-01 {
+    display: none;
+  }
+
   .hero::after {
     background-image: none;
     background-size: 140%;
@@ -386,6 +390,13 @@ button:hover {
 
   .hero .hero-main {
     margin-top: -60px !important;
+  }
+
+  .video {
+    width: calc(100% + 50px);
+    border-image-source: none;
+    border-width: 0pt;
+    border-image-slice: 0;
   }
 
   .evento {

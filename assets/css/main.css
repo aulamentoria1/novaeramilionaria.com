@@ -1,15 +1,47 @@
+@font-face {
+  font-family: Eurostile;
+  src: url('../font/Eurostile.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Europa;
+  src: url('../font/Europa.otf') format('opentype');
+}
+
 :root {
-  --background: #000;
-  --primary: #08ffff;
-  --primary-light: #92c4dd;
+  --background: #070c19;
+  --primary: #07ffff;
+  --secondary: #4460ef;
 }
 
 .bg-primary {
   background-color: var(--primary);
 }
 
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
 .text-primary {
   color: var(--primary);
+}
+
+.text-secondary {
+  color: #4460ef;
+}
+
+.bg-01 {
+  position: absolute;
+  width: 2528px;
+  height: 2529px;
+  left: -1687px;
+  top: -82px;
+
+  background: radial-gradient(
+    47.51% 50% at 50% 50%,
+    rgba(40, 30, 243, 0.33) 0%,
+    rgba(11, 0, 255, 0) 72.92%
+  );
 }
 
 * {
@@ -21,6 +53,8 @@
   text-decoration: none;
   box-sizing: border-box;
   color: #fff;
+  font-weight: 300;
+  font-family: Europa;
 }
 
 html,
@@ -31,6 +65,15 @@ body {
   font-size: 16px;
   font-weight: 500;
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Eurostile;
 }
 
 img {
@@ -78,11 +121,17 @@ input:focus {
 }
 
 button {
-  background: linear-gradient(to right, #4b83e8, #08ffff) !important;
+  background: linear-gradient(
+    268.62deg,
+    #07ffff -25.4%,
+    #281ef3 80.5%
+  ) !important;
+  box-shadow: 0px 0px 31.0864px #281ef3;
+
   padding: 10px 25px !important;
-  border-radius: 3px;
+  border-radius: 1px;
   font-weight: 600 !important;
-  color: #000 !important;
+  color: #fff !important;
   cursor: pointer;
   display: block;
   transition: all 0.3s ease;
@@ -113,7 +162,7 @@ button:hover {
 }
 
 .hero::after {
-  background-image: url('../images/hero.jpg');
+  background-image: url('../images/bg-hero.png');
   content: '';
   width: 100%;
   height: 100%;
@@ -122,76 +171,36 @@ button:hover {
   top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
-  opacity: 0.35;
+  background-position: top right -8%;
+  background-size: 70%;
+  opacity: 1;
   z-index: 0;
-}
-
-.hero::before {
-  content: '';
-  background: radial-gradient(rgba(75, 131, 232, 0.45), transparent 100%);
-  position: absolute;
-  width: 100vw;
-  height: 200vh;
-  top: -100vh;
 }
 /* END:: Pagina INDEX */
 
 /*START:: Pagina V2 */
 .box-evento {
+  background: #0c1428;
+  border: 1px solid #314679;
   width: 100%;
   height: auto;
-  padding: 40px 20px 20px 20px;
-  border: 2px solid var(--primary);
-  border-radius: 5px;
+  padding: 40px;
+  border-radius: 2px;
   position: relative;
   overflow: hidden;
 }
 
-.box-evento::before {
-  content: '';
-  background: radial-gradient(rgba(75, 131, 232, 0.3), transparent 100%);
-  position: absolute;
-  width: 100%;
-  height: 200%;
-  top: -100%;
-  z-index: 2;
-}
-
-.box-evento::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: cover;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-.evento-01::after {
-  background-image: url('../images/evento01.png');
-}
-
-.evento-02:after {
-  background-image: url('../images/evento02.png');
-}
-
-.evento-03::after {
-  background-image: url('../images/evento03.png');
-}
-
 .nova-era {
-  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  margin-top: -500px;
+  padding-top: 500px;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .nova-era::after {
-  background-image: url('../images/nova-era.png');
+  background-image: url('../images/bg-nova-era.png');
   content: '';
   width: 100%;
   height: 100%;
@@ -200,12 +209,62 @@ button:hover {
   top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 50%;
+  background-position: top;
+  background-size: contain;
+  opacity: 1;
+  z-index: 0;
+}
+
+.sobre-mim {
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-mim::after {
+  background-image: url('../images/bg-sobre-mim-desktop.png');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
   opacity: 1;
   z-index: 0;
 }
 /*END:: Pagina V2 */
+
+/* Breakpoint */
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: 300px !important;
+  }
+
+  .hero::after {
+    background-size: 100%;
+    background-position: top;
+  }
+
+  .hero::before {
+    background: radial-gradient(rgba(75, 131, 232, 0.35), transparent 100%);
+  }
+
+  .nova-era::after {
+    background-size: cover;
+  }
+
+  .sobre-mim {
+    padding-top: 330px !important;
+  }
+
+  .sobre-mim::after {
+    background-image: url('../images/sobre-mim-mobile.png');
+    background-size: 110%;
+  }
+}
 
 /* START:: Pagina OBRIGADO  */
 .obrigado {
@@ -276,19 +335,7 @@ button:hover {
   align-items: center;
 }
 
-/* END:: Pagina OBRIGADO  */
-
-/* Breakpoint */
 @media (max-width: 1024px) {
-  .hero::after {
-    background-size: cover;
-    background-position: right;
-  }
-
-  .hero::before {
-    background: radial-gradient(rgba(75, 131, 232, 0.35), transparent 100%);
-  }
-
   .obrigado::after {
     background-size: cover;
     background-position: center;
@@ -297,21 +344,9 @@ button:hover {
   .box-step {
     padding: 30px 20px;
   }
-
-  .nova-era::after {
-    background-size: cover;
-  }
 }
+/* END:: Pagina OBRIGADO  */
 
-/* 
-/
-/
-/
-/
-/
-/
-/
-*/
 ._form-label {
   font-size: 14px;
 }

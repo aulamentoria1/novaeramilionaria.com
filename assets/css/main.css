@@ -132,6 +132,7 @@ button {
     #07ffff -25.4%,
     #281ef3 80.5%
   ) !important;
+
   box-shadow: 0px 0px 18px #281ef3;
   padding: 14px 25px !important;
   border-radius: 1px;
@@ -141,6 +142,7 @@ button {
   display: block;
   transition: all 0.3s ease;
   text-align: center;
+  position: relative;
 }
 
 button:hover {
@@ -200,7 +202,7 @@ button:hover {
 }
 
 .hero::after {
-  background-image: url('../images/bg-hero.webp');
+  background-image: url('../images/bg-hero.webp?v=1');
   content: '';
   width: 100%;
   height: 100%;

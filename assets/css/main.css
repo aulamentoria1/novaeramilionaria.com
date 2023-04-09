@@ -9,7 +9,7 @@
 }
 
 :root {
-  --background: #070c19;
+  --background: #000314;
   --primary: #07ffff;
   --secondary: #4460ef;
 }
@@ -83,10 +83,12 @@ img {
 }
 
 input {
-  background-color: #161a29 !important;
+  background-color: #000314 !important;
   width: 100%;
   margin-bottom: 15px;
-  border: 2px solid var(--primary);
+  border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
+  border-width: 1pt;
+  border-image-slice: 1;
   background-color: transparent;
   height: 50px !important;
   line-height: 50px !important;
@@ -99,7 +101,6 @@ input {
 }
 
 input:focus {
-  border: 2px solid var(--primary) !important;
   box-shadow: 0px 0px 3px 1px var(--primary) !important;
   outline: none;
 }
@@ -206,8 +207,8 @@ button:hover {
   top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-position: top right -8%;
-  background-size: 70%;
+  background-position: top right;
+  background-size: 80%;
   opacity: 1;
   z-index: 0;
 }
@@ -238,7 +239,9 @@ button:hover {
 .video {
   background-color: #161a29;
   width: 100%;
-  border: 2px solid var(--primary);
+  border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
+  border-width: 1pt;
+  border-image-slice: 1;
   height: 40vh;
   border-radius: 8px;
 }

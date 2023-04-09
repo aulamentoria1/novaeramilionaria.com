@@ -375,10 +375,6 @@ button:hover {
 }
 
 @media (max-width: 640px) {
-  .container {
-    padding: 0 50px !important;
-  }
-
   .hero .kayky {
     width: 120%;
     max-width: 120%;

@@ -271,7 +271,7 @@ button:hover {
 }
 
 .nova-era::after {
-  background-image: url('../images/bg-nova-era.webp');
+  background-image: url('../images/bg-nova-era.webp?v=1');
   content: '';
   width: 100%;
   height: 100%;
@@ -396,7 +396,7 @@ button:hover {
   }
 
   .evento::after {
-    background-image: url('../images/bg-nova-era.webp');
+    background-image: url('../images/bg-nova-era.webp?v=1');
     content: '';
     width: 100%;
     height: 100%;

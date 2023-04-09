@@ -243,11 +243,18 @@ button:hover {
 .video {
   background-color: #000314;
   width: 100%;
-  padding-top: calc((9 / 16) * 100%);
+  padding-bottom: 56.25%;
   border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
   border-width: 1pt;
   border-image-slice: 1;
-  border-radius: 8px;
+  position: relative;
+}
+
+.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 /* END:: Pagina INDEX */
 

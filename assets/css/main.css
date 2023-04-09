@@ -335,12 +335,12 @@ button:hover {
 
   .hero .hero-main {
     margin-top: -120px !important;
-    padding-bottom: 120px !important;
   }
 
   .evento {
     position: relative;
     overflow: hidden;
+    margin-top: -10px;
     z-index: 2;
   }
 

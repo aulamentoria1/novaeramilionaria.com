@@ -241,10 +241,10 @@ button:hover {
 .video {
   background-color: #000314;
   width: 100%;
+  padding-top: calc((9 / 16) * 100%);
   border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
   border-width: 1pt;
   border-image-slice: 1;
-  height: 40vh;
   border-radius: 8px;
 }
 /* END:: Pagina INDEX */

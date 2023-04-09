@@ -261,7 +261,7 @@ button:hover {
   }
 
   .sobre-mim::after {
-    background-image: url('../images/sobre-mim-mobile.png');
+    background-image: url('../images/bg-sobre-mim-mobile.png');
     background-size: 110%;
   }
 }

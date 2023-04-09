@@ -137,6 +137,7 @@ button {
   cursor: pointer;
   display: block;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 button:hover {
@@ -155,6 +156,7 @@ button:hover {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .button-primary-02 {

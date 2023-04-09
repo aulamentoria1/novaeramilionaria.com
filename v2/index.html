@@ -57,7 +57,7 @@
 
     <!-- <div class="bg-01"></div> -->
 
-    <section class="hero pt-[30px] lg:py-[60px] pb-[20px]">
+    <section id="anchor" class="hero pt-[30px] lg:py-[60px] pb-[20px]">
       <img
         src="../assets/images/bg-hero.png"
         alt="Image do Kayky"
@@ -337,7 +337,9 @@
           </p>
         </div>
 
-        <button class="mx-auto mt-8">QUERO ME INSCREVER NO EVENTO!</button>
+        <button id="btn-anchor" class="mx-auto mt-8">
+          QUERO ME INSCREVER NO EVENTO!
+        </button>
       </div>
     </section>
     <!-- START:: Nova era -->
@@ -377,7 +379,7 @@
             </p>
           </div>
         </div>
-        <a class="button-primary mx-auto mt-7 lg:mt-14 flex"
+        <a id="btn-anchor-2" class="button-primary mx-auto mt-7 lg:mt-14 flex"
           >QUERO ME INSCREVER NO EVENTO!</a
         >
       </div>
@@ -411,6 +413,18 @@
   </body>
 
   <script type="text/javascript">
+    const button = document.getElementById('btn-anchor')
+    const button2 = document.getElementById('btn-anchor-2')
+    const anchor = document.getElementById('anchor')
+
+    button.addEventListener('click', () => {
+      anchor.scrollIntoView({ behavior: 'smooth' })
+    })
+
+    button2.addEventListener('click', () => {
+      anchor.scrollIntoView({ behavior: 'smooth' })
+    })
+
     function queryUTM() {
       let result = {}
       const keyValuePairs = location.search.slice(1).split('&')

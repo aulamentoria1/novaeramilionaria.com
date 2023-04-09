@@ -323,12 +323,13 @@ button:hover {
     width: 140%;
     max-width: 140%;
     left: -25%;
+    top: -50px;
     display: block !important;
     position: relative;
   }
 
   .hero .container {
-    margin-top: -60px !important;
+    margin-top: -110px !important;
   }
 }
 /* START:: Pagina OBRIGADO  */

@@ -210,7 +210,7 @@ button:hover {
   right: 0;
   background-repeat: no-repeat;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   opacity: 1;
   z-index: 0;
 }
@@ -231,7 +231,7 @@ button:hover {
   right: 0;
   background-repeat: no-repeat;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   opacity: 1;
   z-index: 0;
 }

@@ -26,6 +26,10 @@
   color: var(--primary);
 }
 
+.font-primary {
+  font-family: Europa;
+}
+
 .text-secondary {
   color: #4460ef;
 }

@@ -407,6 +407,7 @@ button:hover {
 
   .video {
     width: calc(100% + 50px);
+    padding-bottom: 62%;
     border-image-source: none;
     border-width: 0pt;
     border-image-slice: 0;

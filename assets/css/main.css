@@ -206,7 +206,7 @@ button:hover {
 }
 
 .hero::after {
-  background-image: url('../images/bg-hero.webp?v=1');
+  background-image: url('../images/bg-hero.webp?v=2');
   content: '';
   width: 100%;
   height: 100%;
@@ -229,7 +229,7 @@ button:hover {
 }
 
 .hero-video::after {
-  background-image: url('../images/bg-video.webp');
+  background-image: url('../images/bg-video.webp?v=2');
   content: '';
   width: 100%;
   height: 100%;

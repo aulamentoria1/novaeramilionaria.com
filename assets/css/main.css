@@ -254,12 +254,6 @@ button:hover {
   position: relative;
 }
 
-.video iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
 /* END:: Pagina INDEX */
 
 /*START:: Pagina V2 */
@@ -525,4 +519,8 @@ button:hover {
   position: absolute;
   right: 0px;
   top: -21px;
+}
+
+.container-hidden {
+  display: none;
 }

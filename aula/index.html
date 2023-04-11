@@ -448,12 +448,12 @@
   <script type="text/javascript" src="../assets/js/main.js"></script>
   <script type="text/javascript">
     const timerVSL = localStorage.getItem('timer')
-    const time = 3600000
+    const timer = 3600000
 
     setTimeout(() => {
       localStorage.setItem('timer', 'liberado')
       visibleContain()
-    }, time)
+    }, timer)
 
     const visibleContain = () => {
       const contain = document.querySelectorAll('.container-hidden')

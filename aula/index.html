@@ -453,8 +453,8 @@
     const timer = 3600000
 
     setTimeout(() => {
-      localStorage.setItem('timer', 'liberado')
       visibleContain()
+      localStorage.setItem('timer', 'liberado')
     }, timer)
 
     const visibleContain = () => {
@@ -466,6 +466,7 @@
     }
 
     if (timerVSL) {
+      console.log('a')
       visibleContain()
     }
   </script>

@@ -244,14 +244,11 @@ button:hover {
   z-index: 0;
 }
 
-.video {
-  background-color: #000314;
-  width: 100%;
-  padding-bottom: 56.25%;
-  border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
-  border-width: 1pt;
-  border-image-slice: 1;
-  position: relative;
+#vid_6435de8af3c3f7000818239c {
+  border-image-source: linear-gradient(70deg, #07ffff, #281ef3) !important;
+  border-width: 1pt !important;
+  border-image-slice: 1 !important;
+  margin-top: 25px;
 }
 
 /* END:: Pagina INDEX */
@@ -386,6 +383,10 @@ button:hover {
 }
 
 @media (max-width: 640px) {
+  .hero-video {
+    min-height: auto;
+  }
+
   .hero .kayky {
     width: 120%;
     max-width: 120%;
@@ -399,9 +400,8 @@ button:hover {
     margin-top: -60px !important;
   }
 
-  .video {
-    width: calc(100% + 50px);
-    padding-bottom: 62%;
+  #vid_6435de8af3c3f7000818239c {
+    width: calc(100% + 50px) !important;
     border-image-source: none;
     border-width: 0pt;
     border-image-slice: 0;

@@ -2,13 +2,15 @@ const button = document.getElementById('btn-anchor')
 const button2 = document.getElementById('btn-anchor-2')
 const anchor = document.getElementById('anchor')
 
-button.addEventListener('click', () => {
-  anchor.scrollIntoView({ behavior: 'smooth' })
-})
+if (button)
+  button.addEventListener('click', () => {
+    anchor.scrollIntoView({ behavior: 'smooth' })
+  })
 
-button2.addEventListener('click', () => {
-  anchor.scrollIntoView({ behavior: 'smooth' })
-})
+if (button2)
+  button2.addEventListener('click', () => {
+    anchor.scrollIntoView({ behavior: 'smooth' })
+  })
 
 function queryUTM() {
   let result = {}

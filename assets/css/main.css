@@ -242,7 +242,7 @@ button:hover {
 }
 
 .header-remarketing h2 {
-  text-shadow: 0px 0px 10px #50eaff;
+  text-shadow: 0px 0px 4px #50eaff;
   color: #50eaff;
 }
 
@@ -409,6 +409,11 @@ button:hover {
     background-image: none;
     background-size: 140%;
     background-position: top;
+  }
+
+  .hero-remarketing::after {
+    background-size: cover;
+    background-position: right;
   }
 
   .hero .kayky {

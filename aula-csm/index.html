@@ -137,11 +137,7 @@
             href="https://pay.kiwify.com.br/lFXTomS"
             class="button-primary mt-5 lg:mt-10 container-hidden"
           >
-<<<<<<< HEAD
-            ENTRAR PARA A COMUNIDADE SELF-MADE
-=======
             ENTRAR PARA A COMUNIDADE SELF-MADE!
->>>>>>> fa19136469badadaee28279d9a04fdcee8494ed5
           </a>
         </div>
       </div>
@@ -204,36 +200,35 @@
   </script>
 
   <script>
-  function isPlatform(host) {
-    if (
-      host.indexOf('payb.ticto.com.br') !== -1 ||
-      host.indexOf('sun.eduzz.com') !== -1 ||
-      host.indexOf('pay.kiwify.com.br') !== -1 ||
-      host.indexOf('ev.braip.com/checkout') !== -1 ||
-      host.indexOf('app.monetizze.com.br/checkout') !== -1
-    ) {
-      return true;
+    function isPlatform(host) {
+      if (
+        host.indexOf('payb.ticto.com.br') !== -1 ||
+        host.indexOf('sun.eduzz.com') !== -1 ||
+        host.indexOf('pay.kiwify.com.br') !== -1 ||
+        host.indexOf('ev.braip.com/checkout') !== -1 ||
+        host.indexOf('app.monetizze.com.br/checkout') !== -1
+      ) {
+        return true
+      }
+      return false
     }
-    return false;
-  }
 
-  (function () {
-    var utmParamQueryString = new URLSearchParams(window.location.search);
+    ;(function () {
+      var utmParamQueryString = new URLSearchParams(window.location.search)
 
-    if (utmParamQueryString.toString()) {
-      var navLinks = document.querySelectorAll('a');
-      navLinks.forEach(function (item) {
-        // if (isPlatform(item.href) || true) {
-        if (!item.href.includes('#')) {
-          if (item.href.indexOf('?') === -1) {
-            item.href += '?' + utmParamQueryString.toString();
-          } else {
-            item.href += '&' + utmParamQueryString.toString();
+      if (utmParamQueryString.toString()) {
+        var navLinks = document.querySelectorAll('a')
+        navLinks.forEach(function (item) {
+          // if (isPlatform(item.href) || true) {
+          if (!item.href.includes('#')) {
+            if (item.href.indexOf('?') === -1) {
+              item.href += '?' + utmParamQueryString.toString()
+            } else {
+              item.href += '&' + utmParamQueryString.toString()
+            }
           }
-        }
-      });
-    }
-  })();
-</script>
-
+        })
+      }
+    })()
+  </script>
 </html>

@@ -96,12 +96,12 @@
           </p>
 
           <div
-            id="vid_643d74db1de2a300099ca37f"
+            id="vid_643c857e00034c00099d6a4a"
             style="position: relative; width: 100%; padding: 56.25% 0 0"
           >
             <img
-              id="thumb_643d74db1de2a300099ca37f"
-              src="https://images.converteai.net/ccdae62e-116b-492f-9648-160a0c5bfcc3/players/643d74db1de2a300099ca37f/thumbnail.jpg"
+              id="thumb_643c857e00034c00099d6a4a"
+              src="https://images.converteai.net/ccdae62e-116b-492f-9648-160a0c5bfcc3/players/643c857e00034c00099d6a4a/thumbnail.jpg"
               style="
                 position: absolute;
                 top: 0;
@@ -113,7 +113,7 @@
               "
             />
             <div
-              id="backdrop_643d74db1de2a300099ca37f"
+              id="backdrop_643c857e00034c00099d6a4a"
               style="
                 position: absolute;
                 top: 0;
@@ -124,10 +124,10 @@
               "
             ></div>
           </div>
-          <script type="text/javascript" id="scr_643d74db1de2a300099ca37f">
+          <script type="text/javascript" id="scr_643c857e00034c00099d6a4a">
             var s = document.createElement('script')
             ;(s.src =
-              'https://scripts.converteai.net/ccdae62e-116b-492f-9648-160a0c5bfcc3/players/643d74db1de2a300099ca37f/player.js'),
+              'https://scripts.converteai.net/ccdae62e-116b-492f-9648-160a0c5bfcc3/players/643c857e00034c00099d6a4a/player.js'),
               (s.async = !0),
               document.head.appendChild(s)
           </script>
@@ -137,7 +137,11 @@
             href="https://pay.kiwify.com.br/lFXTomS"
             class="button-primary mt-5 lg:mt-10 container-hidden"
           >
+<<<<<<< HEAD
             ENTRAR PARA A COMUNIDADE SELF-MADE
+=======
+            ENTRAR PARA A COMUNIDADE SELF-MADE!
+>>>>>>> fa19136469badadaee28279d9a04fdcee8494ed5
           </a>
         </div>
       </div>
@@ -198,4 +202,38 @@
       visibleButton()
     }
   </script>
+
+  <script>
+  function isPlatform(host) {
+    if (
+      host.indexOf('payb.ticto.com.br') !== -1 ||
+      host.indexOf('sun.eduzz.com') !== -1 ||
+      host.indexOf('pay.kiwify.com.br') !== -1 ||
+      host.indexOf('ev.braip.com/checkout') !== -1 ||
+      host.indexOf('app.monetizze.com.br/checkout') !== -1
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  (function () {
+    var utmParamQueryString = new URLSearchParams(window.location.search);
+
+    if (utmParamQueryString.toString()) {
+      var navLinks = document.querySelectorAll('a');
+      navLinks.forEach(function (item) {
+        // if (isPlatform(item.href) || true) {
+        if (!item.href.includes('#')) {
+          if (item.href.indexOf('?') === -1) {
+            item.href += '?' + utmParamQueryString.toString();
+          } else {
+            item.href += '&' + utmParamQueryString.toString();
+          }
+        }
+      });
+    }
+  })();
+</script>
+
 </html>

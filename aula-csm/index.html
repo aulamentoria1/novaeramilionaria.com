@@ -131,6 +131,14 @@
               (s.async = !0),
               document.head.appendChild(s)
           </script>
+
+          <a
+            id="link-buy"
+            href="https://pay.kiwify.com.br/lFXTomS"
+            class="button-primary mt-5 lg:mt-10 container-hidden"
+          >
+            COMPRAR AGORA
+          </a>
         </div>
       </div>
     </section>
@@ -172,26 +180,22 @@
     <!-- END:: Footer -->
   </body>
 
-  <script type="text/javascript" src="../assets/js/main.js"></script>
   <script type="text/javascript">
-    const timerVSL = localStorage.getItem('timer')
-    const timer = 3600000
+    const timerVSL = localStorage.getItem('timer-csm')
+    const timer = 5400000
 
     setTimeout(() => {
-      visibleContain()
-      localStorage.setItem('timer', 'liberado')
+      visibleButton()
+      localStorage.setItem('timer-csm', 'liberado')
     }, timer)
 
-    const visibleContain = () => {
-      const contain = document.querySelectorAll('.container-hidden')
-
-      for (var i = 0; i < contain.length; ++i) {
-        contain[i].classList.add('block')
-      }
+    const visibleButton = () => {
+      const button = document.querySelector('#link-buy')
+      button.classList.add('block')
     }
 
     if (timerVSL) {
-      visibleContain()
+      visibleButton()
     }
   </script>
 </html>

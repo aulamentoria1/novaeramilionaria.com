@@ -583,3 +583,16 @@ button:hover {
 .container-hidden {
   display: none;
 }
+
+.ytp-chrome-top,
+.ytp-chrome-bottom {
+  display: none !important;
+}
+
+.ytp-pause-overlay {
+  display: none !important;
+}
+
+.ytp-chrome-top {
+  display: none !important;
+}

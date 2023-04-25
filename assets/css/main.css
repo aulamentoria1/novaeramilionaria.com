@@ -199,6 +199,7 @@ button:hover {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  z-index: 3;
 }
 
 .hero .kayky {
@@ -215,8 +216,8 @@ button:hover {
   top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-position: top right 50%;
-  background-size: 110%;
+  background-position: top right 70%;
+  background-size: 140%;
   opacity: 1;
   z-index: 0;
 }
@@ -348,7 +349,7 @@ button:hover {
   position: relative;
   overflow: hidden;
 }
-
+/* 
 .sobre-mim::after {
   background-image: url('../images/bg-sobre-mim-desktop.webp');
   content: '';
@@ -363,7 +364,7 @@ button:hover {
   background-size: cover;
   opacity: 1;
   z-index: 0;
-}
+} */
 
 .footer-nova-era {
   width: 100%;

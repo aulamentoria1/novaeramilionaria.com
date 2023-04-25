@@ -222,6 +222,17 @@ button:hover {
   z-index: 0;
 }
 
+@media (min-width: 1980px) {
+  .hero::after {
+    background-position: top right 30%;
+    background-size: 50%;
+  }
+
+  .container-lg {
+    max-width: 1380px !important;
+  }
+}
+
 .header-remarketing {
   position: relative;
   z-index: 2;

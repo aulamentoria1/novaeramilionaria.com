@@ -202,6 +202,22 @@ button:hover {
   z-index: 3;
 }
 
+.hero-kayky {
+  background-color: #000314;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+@media (max-width: 1024px) {
+  .hero-kayky img {
+    width: 150% !important;
+    max-width: 150% !important;
+    margin-left: -25%;
+  }
+}
+
 .hero .kayky {
   display: none;
 }

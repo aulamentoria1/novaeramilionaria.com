@@ -181,7 +181,7 @@ button:hover {
 }
 
 .container {
-  max-width: 890px !important;
+  max-width: 920px !important;
   padding: 0 25px !important;
   margin: 0 auto !important;
   position: relative;
@@ -216,8 +216,8 @@ button:hover {
   top: 0;
   right: 0;
   background-repeat: no-repeat;
-  background-position: top right 70%;
-  background-size: 140%;
+  background-position: top right -38%;
+  background-size: 75%;
   opacity: 1;
   z-index: 0;
 }

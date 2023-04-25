@@ -208,13 +208,19 @@ button:hover {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  padding-bottom: 20px;
   z-index: 3;
 }
 @media (max-width: 1024px) {
+  .hero-kayky {
+    background-color: #00010a;
+  }
   .hero-kayky img {
-    width: 150% !important;
-    max-width: 150% !important;
-    margin-left: -25%;
+    width: 200% !important;
+    max-width: 200% !important;
+    margin-left: -50%;
+    margin-top: auto;
   }
 }
 

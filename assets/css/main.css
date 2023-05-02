@@ -129,7 +129,7 @@ input:focus {
   margin-top: -4px;
 }
 
-button {
+button:not(.smartplayer-icon) {
   width: fit-content;
   background: linear-gradient(
     268.62deg,
@@ -149,15 +149,8 @@ button {
   position: relative;
 }
 
-button:hover {
+button:not(.smartplayer-icon):hover {
   opacity: 0.8;
-}
-
-button.smartplayer-icon {
-  background: none !important;
-  padding: 0 !important;
-  color: inherit !important;
-  font-weight: inherit !important;
 }
 
 .button-primary {

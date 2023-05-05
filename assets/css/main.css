@@ -216,7 +216,7 @@ button:not(.smartplayer-icon):hover {
   padding: 0 25px !important;
   margin: 0 auto !important;
   position: relative;
-  z-index: 9;
+  z-index: 99;
 }
 
 .container-lg {

@@ -717,12 +717,12 @@ button:not(.smartplayer-icon):hover {
 .box-blob::after {
   content: '';
   background-color: #fff;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   position: absolute;
   border-radius: 50%;
-  left: -8px;
-  top: -30px;
+  left: -7.5px;
+  top: -29.5px;
 }
 
 .box-blob::before {

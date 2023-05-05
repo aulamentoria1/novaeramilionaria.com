@@ -311,7 +311,7 @@ button:not(.smartplayer-icon):hover {
 }
 
 @media (max-width: 1024px) {
-  .hero-upsell2 {
+  .hero-main {
     min-height: auto;
   }
 }

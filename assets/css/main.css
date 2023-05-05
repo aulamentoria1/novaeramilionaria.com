@@ -129,7 +129,7 @@ input:focus {
   margin-top: -4px;
 }
 
-button {
+button:not(.smartplayer-icon) {
   width: fit-content;
   background: linear-gradient(
     268.62deg,
@@ -149,7 +149,7 @@ button {
   position: relative;
 }
 
-button:hover {
+button:not(.smartplayer-icon) :hover {
   opacity: 0.8;
 }
 
@@ -180,6 +180,17 @@ button:hover {
   opacity: 0.8;
 }
 
+.line-linear {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background: linear-gradient(
+    268.62deg,
+    #07ffff -25.4%,
+    #281ef3 80.5%
+  ) !important;
+}
+
 .container {
   max-width: 920px !important;
   padding: 0 25px !important;
@@ -202,6 +213,43 @@ button:hover {
   z-index: 3;
 }
 
+.hero-main {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-main::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  z-index: 0;
+}
+
+.hero-upsell::after {
+  background-image: url('../images/bg-main.webp');
+}
+
+.hero-upsell2::after {
+  background-image: url('../images/bg-main-2.webp');
+  opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .hero-main {
+    min-height: auto;
+  }
+}
+
 .hero-kayky {
   background-color: #000314;
   min-width: 100%;
@@ -212,6 +260,7 @@ button:hover {
   padding-bottom: 20px;
   z-index: 3;
 }
+
 @media (max-width: 1024px) {
   .hero-kayky {
     background-color: #00010a;
@@ -489,10 +538,6 @@ button:hover {
     position: relative;
   }
 
-  .hero .hero-main {
-    margin-top: -60px !important;
-  }
-
   #vid_6435de8af3c3f7000818239c {
     width: calc(100% + 50px) !important;
     border-image-source: none;
@@ -629,4 +674,84 @@ button:hover {
 
 .ytp-chrome-top {
   display: none !important;
+}
+
+/* Upsell */
+
+/* Upsell */
+.box-blob {
+  width: 100%;
+  height: 110px;
+  border-left: 1px solid #fff;
+  position: relative;
+  margin-bottom: 46px;
+}
+
+.box-blob-small {
+  height: 90px;
+}
+
+.box-blob-last {
+  border-left: 0;
+  height: 0px;
+}
+
+.box-blob::after {
+  content: '';
+  background-color: #fff;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  border-radius: 50%;
+  left: -7.5px;
+  top: -29.5px;
+}
+
+.box-blob::before {
+  content: '';
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #07ffff;
+  z-index: 2;
+  left: -14.5px;
+  top: -36.5px;
+}
+
+.container-blob {
+  position: absolute;
+  max-width: 800px;
+  margin-top: -42px;
+  margin-left: 50px;
+  top: 0;
+}
+
+.container-blob h4 {
+  font-size: 26px;
+}
+
+@media (max-width: 1024px) {
+  .box-blob::after {
+    width: 12px;
+    height: 12px;
+    left: -6px;
+  }
+
+  .box-blob::before {
+    border: 3px solid #07ffff;
+    width: 24px;
+    height: 24px;
+    left: -12px;
+    top: -36px;
+  }
+
+  .container-blob {
+    margin-top: -38px;
+    margin-left: 28px;
+  }
+
+  .container-blob h4 {
+    font-size: 18px;
+  }
 }

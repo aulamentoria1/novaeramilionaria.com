@@ -134,12 +134,11 @@ input:focus {
 
 button:not(.smartplayer-icon) {
   width: fit-content;
-  background: linear-gradient(
+  background-color: linear-gradient(
     268.62deg,
     #07ffff -25.4%,
     #281ef3 80.5%
   ) !important;
-
   box-shadow: 0px 0px 18px #281ef3;
   padding: 14px 25px !important;
   border-radius: 1px;

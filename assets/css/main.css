@@ -53,6 +53,9 @@
   margin: 0;
   padding: 0;
   vertical-align: baseline;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
   color: #fff;
   font-weight: 300;
@@ -706,6 +709,32 @@ button:not(.smartplayer-icon) :hover {
   height: 0px;
 }
 
+.venda .box-blob {
+  height: 250px;
+}
+
+.venda .box-blob-last {
+  height: 650px;
+}
+
+@media (max-width: 790px) {
+  .venda .box-blob {
+    height: 280px;
+  }
+
+  .venda .box-blob.box-blob-md {
+    height: 370px;
+  }
+
+  .venda .box-blob.box-blob-lg {
+    height: 540px;
+  }
+
+  .venda .box-blob-last {
+    height: 1250px;
+  }
+}
+
 .box-blob::after {
   content: '';
   background-color: #fff;
@@ -764,4 +793,34 @@ button:not(.smartplayer-icon) :hover {
   .container-blob h4 {
     font-size: 18px;
   }
+}
+
+.detail-price {
+  width: 50%;
+  height: 40px;
+  background-color: #131440;
+  margin: 0 auto;
+  position: relative;
+}
+
+.detail-price::before {
+  content: '';
+  background-color: #131440;
+  width: 40px;
+  height: 40px;
+  right: calc(100% - 20px);
+  top: 0;
+  transform: skewX(45deg);
+  position: absolute;
+}
+
+.detail-price::after {
+  content: '';
+  background-color: #131440;
+  width: 40px;
+  height: 40px;
+  left: calc(100% - 20px);
+  top: 0;
+  transform: skewX(-45deg);
+  position: absolute;
 }

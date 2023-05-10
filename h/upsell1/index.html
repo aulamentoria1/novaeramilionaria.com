@@ -116,40 +116,21 @@
 
           <div class="flex flex-col mt-14">
             <div style="text-align: center">
-              <button
-                id="kiwify-upsell-trigger-ZhLXrZI"
-                style="
-                  background: #27af60;
-                  padding: 12px 16px;
-                  cursor: pointer;
-                  color: #ffffff;
-                  font-weight: 600;
-                  border-radius: 4px;
-                  border: 1px solid #27af60;
-                  box-shadow: none;
-                  font-size: 20px;
-                "
-              >
-                Sim, eu aceito essa oferta especial!
-              </button>
-              <div
-                id="kiwify-upsell-cancel-trigger"
-                style="
-                  margin-top: 1rem;
-                  cursor: pointer;
-                  font-size: 16px;
-                  text-decoration: underline;
-                  font-family: sans-serif;
-                "
-              >
-                Não, eu gostaria de recusar essa oferta
-              </div>
+              <!-- HOTMART - Upsell Widget -->
+<div id="box_hotmart"></div>
+<script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
+
+<script>
+opts = {
+key: 'USL-101183-303447-af52e0b456d735a65b5e5ad452b10150',
+width: '650' ,
+height: '420'
+};
+Upsell.Widget.show(opts);
+</script>
+<!-- HOTMART - Upsell Widget [end] -->
+
             </div>
-            <script>
-              let nextUpsellURL = 'https://novaeradoplr.com/upsell2/'
-              let nextDownsellURL = 'https://novaeradoplr.com/downsell1/'
-            </script>
-            <script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
           </div>
         </div>
       </div>

@@ -27,8 +27,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/normalize.css" />
-    <link rel="stylesheet" href="../assets/css/main.css?v=2023-05-07-21:46" />
+    <link rel="stylesheet" href="../../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/css/main.css?v=2023-05-07-21:46" />
 
     <!--START:: Google Tag Manager -->
     <script>
@@ -63,7 +63,7 @@
         <div class="!max-w-[920px] flex flex-col items-center mx-auto">
           <div class="flex gap-2 items-center mb-7">
             <img
-              src="../assets/images/logo.svg"
+              src="../../assets/images/logo.svg"
               width="120px"
               alt="Icon da nova era dos PLR"
               class="w-[90px] lg:w-[120px]"
@@ -178,7 +178,7 @@
 
         <div class="flex flex-col mt-10">
           <div style="text-align: center">
-            <button
+            <button onclick="aceitar()" 
               id="kiwify-upsell-trigger-VVecZ6Z"
               style="
                 background: #27af60;
@@ -195,7 +195,7 @@
             >
               Sim, eu aceito essa oferta especial!
             </button>
-            <div
+            <div onclick="recusar()" 
               id="kiwify-upsell-cancel-trigger"
               style="
                 margin-top: 1rem;
@@ -208,11 +208,6 @@
               Não, eu gostaria de recusar essa oferta
             </div>
           </div>
-          <script>
-            let nextUpsellURL = ""
-            let nextDownsellURL = ""
-          </script>
-          <script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
         </div>
       </div>
     </section>
@@ -225,7 +220,7 @@
             A NOVA ERA DO PLR
           </h1>
           <img
-            src="../assets/images/logo-icon.svg"
+            src="../../assets/images/logo-icon.svg"
             width="40px"
             alt="Icon da nova era dos PLR"
             class="w-[40px]"
@@ -255,54 +250,14 @@
   </body>
 
   <script type="text/javascript">
-    const timerVSL = localStorage.getItem('timer-tema0')
-    const timer = 600000
-
-    setTimeout(() => {
-      visibleButton()
-      localStorage.setItem('timer-tema0', 'liberado')
-    }, timer)
-
-    const visibleButton = () => {
-      const button = document.querySelector('#link-buy')
-      button.classList.add('block')
+    
+    function aceitar() {
+      location.href = "https://pay.kiwify.com.br/VVecZ6Z?afid=dJNinCdi"
     }
 
-    if (timerVSL) {
-      visibleButton()
-    }
-  </script>
-
-  <script>
-    function isPlatform(host) {
-      if (
-        host.indexOf('payb.ticto.com.br') !== -1 ||
-        host.indexOf('sun.eduzz.com') !== -1 ||
-        host.indexOf('pay.kiwify.com.br') !== -1 ||
-        host.indexOf('ev.braip.com/checkout') !== -1 ||
-        host.indexOf('app.monetizze.com.br/checkout') !== -1
-      ) {
-        return true
-      }
-      return false
+    function recusar() {
+      location.href = "https://novaeramilionaria.com/obrigado-mentoria/"
     }
 
-    ;(function () {
-      var utmParamQueryString = new URLSearchParams(window.location.search)
-
-      if (utmParamQueryString.toString()) {
-        var navLinks = document.querySelectorAll('a')
-        navLinks.forEach(function (item) {
-          // if (isPlatform(item.href) || true) {
-          if (!item.href.includes('#')) {
-            if (item.href.indexOf('?') === -1) {
-              item.href += '?' + utmParamQueryString.toString()
-            } else {
-              item.href += '&' + utmParamQueryString.toString()
-            }
-          }
-        })
-      }
-    })()
   </script>
 </html>

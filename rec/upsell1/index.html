@@ -116,7 +116,7 @@
 
           <div class="flex flex-col mt-14">
             <div style="text-align: center">
-              <button
+              <button onclick="aceitar()" 
                 id="kiwify-upsell-trigger-ZhLXrZI"
                 style="
                   background: #27af60;
@@ -132,7 +132,7 @@
               >
                 Sim, eu aceito essa oferta especial!
               </button>
-              <div
+              <div onclick="recusar()"
                 id="kiwify-upsell-cancel-trigger"
                 style="
                   margin-top: 1rem;
@@ -145,11 +145,6 @@
                 Não, eu gostaria de recusar essa oferta
               </div>
             </div>
-            <script>
-              let nextUpsellURL = 'https://novaeradoplr.com/upsell2/'
-              let nextDownsellURL = 'https://novaeradoplr.com/downsell1/'
-            </script>
-            <script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
           </div>
         </div>
       </div>
@@ -240,54 +235,15 @@
   </body>
 
   <script type="text/javascript">
-    const timerVSL = localStorage.getItem('timer-tema0')
-    const timer = 600000
-
-    setTimeout(() => {
-      visibleButton()
-      localStorage.setItem('timer-tema0', 'liberado')
-    }, timer)
-
-    const visibleButton = () => {
-      const button = document.querySelector('#link-buy')
-      button.classList.add('block')
+    
+    function aceitar() {
+      location.href = "https://pay.kiwify.com.br/ZhLXrZI?afid=vzCHNTtp"
     }
 
-    if (timerVSL) {
-      visibleButton()
+    function recusar() {
+      location.href = "https://novaeramilionaria.com/rec/downsell1"
     }
+
   </script>
 
-  <script>
-    function isPlatform(host) {
-      if (
-        host.indexOf('payb.ticto.com.br') !== -1 ||
-        host.indexOf('sun.eduzz.com') !== -1 ||
-        host.indexOf('pay.kiwify.com.br') !== -1 ||
-        host.indexOf('ev.braip.com/checkout') !== -1 ||
-        host.indexOf('app.monetizze.com.br/checkout') !== -1
-      ) {
-        return true
-      }
-      return false
-    }
-
-    ;(function () {
-      var utmParamQueryString = new URLSearchParams(window.location.search)
-
-      if (utmParamQueryString.toString()) {
-        var navLinks = document.querySelectorAll('a')
-        navLinks.forEach(function (item) {
-          // if (isPlatform(item.href) || true) {
-          if (!item.href.includes('#')) {
-            if (item.href.indexOf('?') === -1) {
-              item.href += '?' + utmParamQueryString.toString()
-            } else {
-              item.href += '&' + utmParamQueryString.toString()
-            }
-          }
-        })
-      }
-    })()
-  </script>
 </html>

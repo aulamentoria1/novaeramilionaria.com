@@ -58,7 +58,7 @@
     </noscript>
     <!--END:: Google Tag Manager (noscript) -->
 
-    <section class="hero-main hero-downsell2 pt-[30px] lg:py-[60px] pb-[20px]">
+    <section class="hero-main hero-downsell1 pt-[30px] lg:py-[60px] pb-[20px]">
       <div id="anchor" class="container container-lg">
         <div class="!max-w-[920px] flex flex-col items-center mx-auto">
           <div class="flex gap-2 items-center mb-7">
@@ -73,24 +73,27 @@
           <h1
             class="text-[30px] lg:text-[40px] max-w-[890px] leading-[30px] lg:leading-[40px] text-center"
           >
-            <strong class="text-primary">É agora ou NUNCA…</strong>
+            <strong class="text-primary">Vou te dar mais uma chance… </strong>
             <br />
             Eu tenho uma última oferta irrecusável pra você!
           </h1>
 
           <p class="text-white/60 lg:text-[18px] text-center mt-2">
             Eu não quero que você fique de fora, então vou te dar
-            <strong class="text-primary">mais R$200,00 de desconto.</strong>
+            <strong class="text-primary">mais R$500,00 de desconto.</strong>
           </p>
 
           <span
             class="line-linear max-w-[200px] mx-auto mt-5 mb-10 lg:mb-16"
           ></span>
 
-          <div class="w-full mb-10">
-            <div class="w-full border border-white/20 py-2 text-center">
+          <div class="mb-10">
+            <div
+              class="w-full py-2 text-center"
+              style="background-color: #020e34"
+            >
               <h2
-                class="text-primary text-[22px] lg:text-[30px] leading-[22px] lg:leading-[30px] text-center"
+                class="text-white text-[22px] lg:text-[30px] leading-[22px] lg:leading-[30px] text-center"
               >
                 Isso significa que você vai receber...
               </h2>
@@ -99,15 +102,25 @@
             <p
               class="text-white/60 lg:text-[18px] text-center mt-4 lg:max-w-[80%] mx-auto"
             >
-              O Funil PLR Milionário que é o Impulsionador de Lucro que vai
-              aumentar o seu faturamento e lucratividade
-              <strong class="text-primary">por apenas R$297</strong>
-              <strong class="text-white">ou em até 12x de 29,90.</strong>
+              <strong class="text-white"
+                >O Acelerador PLR Internacional,</strong
+              >
+              Um conjunto de 6 PLRs (3 em PT-BR e 3 em Espanhol) prontos com
+              toda a estrutura, VSLs, e páginas…
+            </p>
+
+            <p
+              class="text-white/60 lg:text-[18px] text-center mt-4 lg:max-w-[80%] mx-auto"
+            >
+              Feitos pela nossa equipe especificamente para que você já comece a
+              ter resultados no Mercado Internacional, ele foi estruturado para
+              que você só precise copiar, colar e começar a vender! Tudo isso
+              por apenas R$497 ou em até 12x R$50.
             </p>
           </div>
 
-          <div class="w-full">
-            <div class="w-full border border-white/20 py-2 text-center">
+          <div>
+            <div class="w-full py-2 text-center">
               <h2
                 class="text-primary text-[22px] lg:text-[30px] leading-[22px] lg:leading-[30px] text-center"
               >
@@ -119,9 +132,9 @@
               class="text-white/60 lg:text-[18px] text-center mt-4 lg:max-w-[600px] mx-auto"
             >
               Essa é uma
-              <strong class="text-white">OPORTUNIDADE ÚNICA</strong> que separei
-              exclusivamente para você que quer acelerar ainda mais os seus
-              resultados!
+              <strong class="text-primary">OPORTUNIDADE ÚNICA</strong> que
+              separei exclusivamente para você que quer acelerar ainda mais os
+              seus resultados!
             </p>
           </div>
         </div>
@@ -160,10 +173,9 @@
           </h1>
         </div>
 
-        <p class="text-lg text-white/50 max-w-[500px] mx-auto text-center mt-5">
-          Essa é uma oferta exclusiva e só está disponível pra você agora. Se
-          você fechar ou sair dessa página, pode ser que você nunca mais tenha a
-          chance de adquirir esse conteúdo...
+        <p class="text-lg text-white/50 max-w-[550px] mx-auto text-center mt-5">
+          Essa é uma OPORTUNIDADE ÚNICA que separei exclusivamente para você que
+          quer acelerar ainda mais os seus resultados!
         </p>
       </div>
     </section>
@@ -178,8 +190,8 @@
 
         <div class="flex flex-col mt-10">
           <div style="text-align: center">
-            <button
-              id="kiwify-upsell-trigger-VVecZ6Z"
+            <button onclick="aceitar()" 
+              id="kiwify-upsell-trigger-b11SY3S"
               style="
                 background: #27af60;
                 padding: 12px 16px;
@@ -195,7 +207,7 @@
             >
               Sim, eu aceito essa oferta especial!
             </button>
-            <div
+            <div onclick="recusar()" 
               id="kiwify-upsell-cancel-trigger"
               style="
                 margin-top: 1rem;
@@ -208,11 +220,6 @@
               Não, eu gostaria de recusar essa oferta
             </div>
           </div>
-          <script>
-            let nextUpsellURL = ""
-            let nextDownsellURL = ""
-          </script>
-          <script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
         </div>
       </div>
     </section>
@@ -255,54 +262,14 @@
   </body>
 
   <script type="text/javascript">
-    const timerVSL = localStorage.getItem('timer-tema0')
-    const timer = 600000
-
-    setTimeout(() => {
-      visibleButton()
-      localStorage.setItem('timer-tema0', 'liberado')
-    }, timer)
-
-    const visibleButton = () => {
-      const button = document.querySelector('#link-buy')
-      button.classList.add('block')
+    
+    function aceitar() {
+      location.href = "https://pay.kiwify.com.br/b11SY3S?afid=vzCHNTtp"
     }
 
-    if (timerVSL) {
-      visibleButton()
-    }
-  </script>
-
-  <script>
-    function isPlatform(host) {
-      if (
-        host.indexOf('payb.ticto.com.br') !== -1 ||
-        host.indexOf('sun.eduzz.com') !== -1 ||
-        host.indexOf('pay.kiwify.com.br') !== -1 ||
-        host.indexOf('ev.braip.com/checkout') !== -1 ||
-        host.indexOf('app.monetizze.com.br/checkout') !== -1
-      ) {
-        return true
-      }
-      return false
+    function recusar() {
+      location.href = "https://novaeramilionaria.com/rec/upsell2"
     }
 
-    ;(function () {
-      var utmParamQueryString = new URLSearchParams(window.location.search)
-
-      if (utmParamQueryString.toString()) {
-        var navLinks = document.querySelectorAll('a')
-        navLinks.forEach(function (item) {
-          // if (isPlatform(item.href) || true) {
-          if (!item.href.includes('#')) {
-            if (item.href.indexOf('?') === -1) {
-              item.href += '?' + utmParamQueryString.toString()
-            } else {
-              item.href += '&' + utmParamQueryString.toString()
-            }
-          }
-        })
-      }
-    })()
   </script>
 </html>

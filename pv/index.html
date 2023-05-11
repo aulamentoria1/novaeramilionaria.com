@@ -978,23 +978,6 @@
   </body>
 
   <script type="text/javascript">
-    const timerVSL = localStorage.getItem('timer-tema0')
-    const timer = 600000
-
-    setTimeout(() => {
-      visibleButton()
-      localStorage.setItem('timer-tema0', 'liberado')
-    }, timer)
-
-    const visibleButton = () => {
-      const button = document.querySelector('#link-buy')
-      button.classList.add('block')
-    }
-
-    if (timerVSL) {
-      visibleButton()
-    }
-
     var swiper = new Swiper('.swiper', {
       slidesPerView: 'auto',
       spaceBetween: 24,
